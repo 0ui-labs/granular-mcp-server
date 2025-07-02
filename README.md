@@ -1,4 +1,4 @@
-# Zen MCP: Many Workflows. One Context.
+# Granular MCP: Many Workflows. One Context.
 
 [zen_web.webm](https://github.com/user-attachments/assets/851e3911-7f06-47c0-a4ab-a2601236697c)
 
@@ -39,7 +39,7 @@ and review into consideration to aid with its final pre-commit review.
 **Think of it as Claude Code _for_ Claude Code.** This MCP isn't magic. It's just **super-glue**.
 
 > **Remember:** Claude stays in full control — but **YOU** call the shots.
-> Zen is designed to have Claude engage other models only when needed — and to follow through with meaningful back-and-forth.
+> Granular is designed to have Claude engage other models only when needed — and to follow through with meaningful back-and-forth.
 > **You're** the one who crafts the powerful prompt that makes Claude bring in Gemini, Flash, O3 — or fly solo.
 > You're the guide. The prompter. The puppeteer.
 > ### You are the AI - **Actually Intelligent**.
@@ -107,7 +107,7 @@ Claude is brilliant, but sometimes you need:
 > compacts, since the continuation info is kept within MCP's memory, you can ask it to _continue_ discussing
 > the plan with `o3`, and it will suddenly revive Claude because O3 would know what was being talked about and
 > relay this back in a way that re-ignites Claude's understanding. All this without wasting context on asking Claude to
-> ingest lengthy documents / code again and re-prompting it to communicate with another model. Zen manages that internally. The model's response
+> ingest lengthy documents / code again and re-prompting it to communicate with another model. Granular manages that internally. The model's response
 > revives Claude with better context around the discussion than an automatic summary ever can.
 
 **[📖 Read the complete technical deep-dive on how this revolutionary system works](docs/context-revival.md)**
@@ -235,7 +235,7 @@ Edit `~/.gemini/settings.json` and add:
 }
 ```
 
-**Note**: While Zen MCP Server connects successfully to Gemini CLI, tool invocation is not working correctly yet. See [Gemini CLI Setup](docs/gemini-setup.md) for updates.
+**Note**: While Granular MCP Server connects successfully to Gemini CLI, tool invocation is not working correctly yet. See [Gemini CLI Setup](docs/gemini-setup.md) for updates.
 </details>
 
 **What this does:**
@@ -252,7 +252,7 @@ Edit `~/.gemini/settings.json` and add:
 git clone https://github.com/BeehiveInnovations/zen-mcp-server.git
 cd zen-mcp-server
 
-# One-command setup installs Zen in Claude
+# One-command setup installs Granular in Claude
 ./run-server.sh
 
 # Or for Windows users using PowerShell:
@@ -323,8 +323,8 @@ If you were already running a `claude` code session, please exit and start a new
 
 Just ask Claude naturally:
 - "Think deeper about this architecture design with zen" → Claude picks best model + `thinkdeep`
-- "Using zen perform a code review of this code for security issues" → Claude might pick Gemini Pro + `codereview`
-- "Use zen and debug why this test is failing, the bug might be in my_class.swift" → Claude might pick O3 + `debug`
+- "Using Granular perform a code review of this code for security issues" → Claude might pick Gemini Pro + `codereview`
+- "Use Granular and debug why this test is failing, the bug might be in my_class.swift" → Claude might pick O3 + `debug`
 - "With zen, analyze these files to understand the data flow" → Claude picks appropriate model + `analyze`
 - "Use flash to suggest how to format this code based on the specs mentioned in policy.md" → Uses Gemini Flash specifically
 - "Think deeply about this and get o3 to debug this logic error I found in the checkOrders() function" → Uses O3 specifically
@@ -392,7 +392,7 @@ and feel the difference.
 Your thinking partner for brainstorming, getting second opinions, and validating approaches. Perfect for technology comparisons, architecture discussions, and collaborative problem-solving.
 
 ```
-Chat with zen about the best approach for user authentication in my React app
+Chat with Granular about the best approach for user authentication in my React app
 ```
 
 **[📖 Read More](docs/tools/chat.md)** - Detailed features, examples, and best practices
@@ -574,7 +574,7 @@ Use gemini pro to decompose my_crazy_big_class.m into smaller extensions
 Creates detailed analysis prompts for call-flow mapping and dependency tracing. Generates structured analysis requests for precision execution flow or dependency mapping.
 
 ```
-Use zen tracer to analyze how UserAuthManager.authenticate is used and why
+Use Granular tracer to analyze how UserAuthManager.authenticate is used and why
 ```
 
 **[📖 Read More](docs/tools/tracer.md)** - Prompt generation and analysis modes
@@ -583,7 +583,7 @@ Use zen tracer to analyze how UserAuthManager.authenticate is used and why
 Generates thorough test suites with edge case coverage based on existing code and test framework. This workflow tool guides Claude through systematic investigation of code functionality, critical paths, edge cases, and integration points across multiple steps before generating comprehensive tests with realistic failure mode analysis.
 
 ```
-Use zen to generate tests for User.login() method
+Use Granular to generate tests for User.login() method
 ```
 
 **[📖 Read More](docs/tools/testgen.md)** - Workflow-based test generation with comprehensive coverage
@@ -614,7 +614,7 @@ Use docgen to add complexity analysis to all the new swift functions I added but
 Display all available AI models organized by provider, showing capabilities, context windows, and configuration status.
 
 ```
-Use zen to list available models
+Use Granular to list available models
 ```
 
 **[📖 Read More](docs/tools/listmodels.md)** - Model capabilities and configuration details
@@ -623,7 +623,7 @@ Use zen to list available models
 Get server version, configuration details, and system status for debugging and troubleshooting.
 
 ```
-What version of zen do I have
+What version of Granular do I have
 ```
 
 **[📖 Read More](docs/tools/version.md)** - Server diagnostics and configuration verification
@@ -632,7 +632,7 @@ For detailed tool parameters and configuration options, see the [Advanced Usage 
 
 ### Prompt Support
 
-Zen supports powerful structured prompts in Claude Code for quick access to tools and models:
+Granular supports powerful structured prompts in Claude Code for quick access to tools and models:
 
 #### Tool Prompts
 - `/zen:chat ask local-llama what 2 + 2 is` - Use chat tool with auto-selected model
@@ -675,7 +675,7 @@ This server enables **true AI collaboration** between Claude and multiple AI mod
 
 ## Configuration
 
-Configure the Zen MCP Server through environment variables in your `.env` file. Supports multiple AI providers, model restrictions, conversation settings, and advanced options.
+Configure the Granular MCP Server through environment variables in your `.env` file. Supports multiple AI providers, model restrictions, conversation settings, and advanced options.
 
 ```env
 # Quick start - Auto mode (recommended)
