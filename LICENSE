@@ -181,8 +181,21 @@ Apache License
       the brackets!)  The text should be enclosed in comments for the
       particular file format. An identification line is also useful.
 
+     ===========================================================================
+     This product is based on software developed by Beehive Innovations
+     (https://github.com/BeehiveInnovations), licensed under the Apache
+      License, Version 2.0.
+
       Copyright 2025 Beehive Innovations
-      https://github.com/BeehiveInnovations
+
+      A copy of the license is included in the LICENSE file.
+      ===========================================================================
+
+      This product contains modifications by 0ui-labs (https://github.com/0ui-labs).
+      Copyright 2025 0ui-labs
+
+      The modifications are also licensed under the Apache License, Version 2.0.
+      ===========================================================================
 
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
